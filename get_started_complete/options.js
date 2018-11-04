@@ -11,6 +11,7 @@ function constructOptions(kButtonColors) {
     let button = document.createElement('button');
     button.style.backgroundColor = item;
     button.addEventListener('click', function() {
+      alert("You clicked me?");
       chrome.storage.sync.set({color: item}, function() {
         console.log('color is ' + item);
       })

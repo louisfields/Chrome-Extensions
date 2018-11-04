@@ -12,6 +12,7 @@ chrome.storage.sync.get('color', function(data) {
 });
 
 changeColor.onclick = function(element) {
+  alert("You clicked me!");
   let color = element.target.value;
   chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
     chrome.tabs.executeScript(
